@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#080a1b">
-<title>一球灭城 V10 · 爽感革命 | ProfMonkey</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#180e0d">
+<title>飞车拆城 V11 · 狂飙崩塌 | ProfMonkey</title>
 <style>
-:root{--bg:#080b1d;--blue:#66f3ff;--pink:#ff4d9b;--gold:#ffdc76;--muted:#94a9cd;color-scheme:dark}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(ellipse 500px 300px at 50% -8%,#252153,transparent),#080b1d;color:#fff;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;font-family:inherit}a{color:inherit;text-decoration:none}
-.app{max-width:472px;margin:0 auto;padding:12px 13px 24px;display:flex;flex-direction:column;gap:10px}.top{display:flex;align-items:center;justify-content:space-between}.logo{font-weight:1000;font-size:21px;letter-spacing:.8px;text-shadow:0 0 25px #53dfff88}.logo b{color:var(--gold)}.sub{display:block;font-weight:600;font-size:9px;color:#91b4eb;letter-spacing:2px;margin-top:2px}.top-actions{display:flex;gap:7px}button.small{font-size:11px;padding:10px;border:1px solid #34547d;background:#172542;border-radius:10px;color:#cfe8ff}
-.ribbon{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(110deg,#2e2357,#162949 55%,#16223e);border:1px solid #6454a6;border-radius:12px;padding:9px 10px;font-size:12px;gap:6px}.ribbon strong{font-size:13px;color:#ffe88f}.ribbon em{font-style:normal;color:#adc0dd;font-size:10px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stat{border:1px solid #304067;background:linear-gradient(#1b2745,#12192f);border-radius:12px;padding:8px;text-align:center}.stat b{display:block;font-size:21px;line-height:1.1;font-variant-numeric:tabular-nums}.stat span{font-size:10px;color:#a4b5d6}
-.stage{width:100%;aspect-ratio:420/740;position:relative;border:1px solid #5772ab;border-radius:19px;overflow:hidden;background:#0b1231;box-shadow:0 0 0 3px #1d2540,0 14px 44px #000a,0 0 40px #6a42fe1a;touch-action:none}#game{display:block;width:100%;height:100%;touch-action:none}.stage:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 38%,#01030c66 100%);pointer-events:none}.game-tip{position:absolute;bottom:82px;left:50%;transform:translateX(-50%);width:max-content;max-width:94%;background:#101830cb;border:1px solid #89eaff55;border-radius:30px;padding:8px 14px;color:#e8f9ff;font-size:12px;pointer-events:none;transition:opacity .3s}.game-tip.off{opacity:0}.panel{display:none;position:absolute;inset:0;z-index:4;background:#090f27e8;backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px}.panel.show{display:flex}.modal{width:100%;max-height:92%;overflow-y:auto;border:1px solid #5d78b2;border-radius:19px;background:linear-gradient(145deg,#1c254f,#0f1734);padding:22px 16px;text-align:center;box-shadow:0 20px 80px #000a}.modal h2{font-size:29px;margin:7px 0;letter-spacing:1px}.modal p{font-size:12px;line-height:1.85;color:#bbcae5}.modal .big{font-size:55px;margin:10px}.modal .score{font-size:39px;font-weight:1000;color:#ffe88d;text-shadow:0 0 20px #ffad6570}.modal .tiny{font-size:11px;color:#8aa5ca}.row{display:flex;gap:8px;justify-content:center;margin-top:13px;flex-wrap:wrap}.cta{border:0;border-radius:12px;padding:12px 15px;font-size:14px;color:#0d1231;font-weight:900;background:linear-gradient(95deg,#74fff3,#4babff);box-shadow:0 6px 19px #3a95ff50}.cta.hot{background:linear-gradient(95deg,#ffe788,#ff7e5f);box-shadow:0 6px 19px #fa886055}.cta.dark{background:#1b2a4e;border:1px solid #4b6697;box-shadow:none;color:#e4f1ff}.cta:active,.small:active,.ammo:active{transform:scale(.96)}.cta:disabled{filter:grayscale(1);opacity:.5}.level-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:12px}.level-grid button{background:#1f365b;color:#e4f4ff;border:1px solid #4d6a98;border-radius:9px;padding:9px 1px;font-size:12px;font-weight:900}.level-grid button.sel{border-color:#ffee89;background:#725041}.level-grid button.done{color:#afffe8;border-color:#368f78}
-.progress-box{display:flex;align-items:center;gap:10px;border:1px solid #34446b;border-radius:11px;background:#151f3c;padding:9px}.progress-box span{font-size:11px;color:#c5d6f4;white-space:nowrap}.track{height:9px;background:#293350;border-radius:20px;flex:1;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#36dcff,#b66aff,#ff6e80);border-radius:20px;box-shadow:0 0 13px #c97cff}.power{width:100%;padding:13px 10px;border:1px solid #d68d65;border-radius:12px;background:linear-gradient(105deg,#5b2239,#5c2b45 58%,#4a334a);color:#fff;font-weight:1000;font-size:15px;letter-spacing:.5px;box-shadow:inset 0 1px #ffffff20,0 5px 25px #ff567343;position:relative;overflow:hidden}.power.ready{animation:powerPulse 1.0s ease-in-out infinite alternate;border-color:#fff2a2;background:linear-gradient(110deg,#ffcc50,#ff6e5c,#f54196);color:#2c0c23;box-shadow:0 0 23px #fb577e88}.power:disabled{opacity:.8;cursor:not-allowed}@keyframes powerPulse{to{filter:brightness(1.25);transform:scale(1.016)}}.bottom{display:grid;grid-template-columns:1fr auto auto;gap:7px}.mini{background:#172947;border:1px solid #345684;color:#d6eaff;font-size:12px;border-radius:12px;padding:11px}.tools{display:flex;gap:7px}.tools button{flex:1;border:1px solid #344c71;background:#17243c;border-radius:11px;color:#bcd0ee;padding:10px 5px;font-size:11px}.tools button.active{background:linear-gradient(130deg,#30486a,#263358);color:#fff;border-color:#71ddef}.foot{text-align:center;font-size:10px;line-height:1.7;color:#7289b4}#toast{position:fixed;top:10%;left:50%;transform:translateX(-50%);background:#1a3556;border:1px solid #77e6ff;border-radius:15px;padding:11px 18px;opacity:0;pointer-events:none;z-index:100;font-size:13px;transition:opacity .22s;white-space:nowrap}#toast.show{opacity:1}
+:root{--bg:#130e0c;--blue:#ffad62;--pink:#ff6746;--gold:#ffd88c;--muted:#c5a899;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(ellipse 500px 300px at 50% -8%,#642b17,transparent),#130e0c;color:#fff;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;font-family:inherit}a{color:inherit;text-decoration:none}
+.app{max-width:472px;margin:0 auto;padding:12px 13px 24px;display:flex;flex-direction:column;gap:10px}.top{display:flex;align-items:center;justify-content:space-between}.logo{font-weight:1000;font-size:21px;letter-spacing:.8px;text-shadow:0 0 25px #ff8b2988}.logo b{color:var(--gold)}.sub{display:block;font-weight:600;font-size:9px;color:#f5b68f;letter-spacing:2px;margin-top:2px}.top-actions{display:flex;gap:7px}button.small{font-size:11px;padding:10px;border:1px solid #34547d;background:#172542;border-radius:10px;color:#cfe8ff}
+.ribbon{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(110deg,#582315,#402019 55%,#241915);border:1px solid #955b35;border-radius:12px;padding:9px 10px;font-size:12px;gap:6px}.ribbon strong{font-size:13px;color:#ffe88f}.ribbon em{font-style:normal;color:#adc0dd;font-size:10px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stat{border:1px solid #66402e;background:linear-gradient(#38251f,#1e1717);border-radius:12px;padding:8px;text-align:center}.stat b{display:block;font-size:21px;line-height:1.1;font-variant-numeric:tabular-nums}.stat span{font-size:10px;color:#a4b5d6}
+.stage{width:100%;aspect-ratio:420/740;position:relative;border:1px solid #af623b;border-radius:19px;overflow:hidden;background:#160f0e;box-shadow:0 0 0 3px #301a14,0 14px 44px #000a,0 0 40px #ff6e221a;touch-action:none}#game{display:block;width:100%;height:100%;touch-action:none}.stage:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 38%,#01030c66 100%);pointer-events:none}.game-tip{position:absolute;bottom:82px;left:50%;transform:translateX(-50%);width:max-content;max-width:94%;background:#101830cb;border:1px solid #89eaff55;border-radius:30px;padding:8px 14px;color:#e8f9ff;font-size:12px;pointer-events:none;transition:opacity .3s}.game-tip.off{opacity:0}.panel{display:none;position:absolute;inset:0;z-index:4;background:#090f27e8;backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px}.panel.show{display:flex}.modal{width:100%;max-height:92%;overflow-y:auto;border:1px solid #5d78b2;border-radius:19px;background:linear-gradient(145deg,#1c254f,#0f1734);padding:22px 16px;text-align:center;box-shadow:0 20px 80px #000a}.modal h2{font-size:29px;margin:7px 0;letter-spacing:1px}.modal p{font-size:12px;line-height:1.85;color:#bbcae5}.modal .big{font-size:55px;margin:10px}.modal .score{font-size:39px;font-weight:1000;color:#ffe88d;text-shadow:0 0 20px #ffad6570}.modal .tiny{font-size:11px;color:#8aa5ca}.row{display:flex;gap:8px;justify-content:center;margin-top:13px;flex-wrap:wrap}.cta{border:0;border-radius:12px;padding:12px 15px;font-size:14px;color:#0d1231;font-weight:900;background:linear-gradient(95deg,#ffcb62,#ff6543);box-shadow:0 6px 19px #fa752850}.cta.hot{background:linear-gradient(95deg,#ffe788,#ff7e5f);box-shadow:0 6px 19px #fa886055}.cta.dark{background:#1b2a4e;border:1px solid #4b6697;box-shadow:none;color:#e4f1ff}.cta:active,.small:active,.ammo:active{transform:scale(.96)}.cta:disabled{filter:grayscale(1);opacity:.5}.level-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:12px}.level-grid button{background:#1f365b;color:#e4f4ff;border:1px solid #4d6a98;border-radius:9px;padding:9px 1px;font-size:12px;font-weight:900}.level-grid button.sel{border-color:#ffee89;background:#725041}.level-grid button.done{color:#afffe8;border-color:#368f78}
+.progress-box{display:flex;align-items:center;gap:10px;border:1px solid #34446b;border-radius:11px;background:#151f3c;padding:9px}.progress-box span{font-size:11px;color:#c5d6f4;white-space:nowrap}.track{height:9px;background:#293350;border-radius:20px;flex:1;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#e85a26,#ffae42,#ffebaa);border-radius:20px;box-shadow:0 0 13px #c97cff}.power{width:100%;padding:13px 10px;border:1px solid #d68d65;border-radius:12px;background:linear-gradient(105deg,#5b2239,#5c2b45 58%,#4a334a);color:#fff;font-weight:1000;font-size:15px;letter-spacing:.5px;box-shadow:inset 0 1px #ffffff20,0 5px 25px #ff567343;position:relative;overflow:hidden}.power.ready{animation:powerPulse 1.0s ease-in-out infinite alternate;border-color:#fff2a2;background:linear-gradient(110deg,#ffcc50,#ff6e5c,#f54196);color:#2c0c23;box-shadow:0 0 23px #fb577e88}.power:disabled{opacity:.8;cursor:not-allowed}@keyframes powerPulse{to{filter:brightness(1.25);transform:scale(1.016)}}.bottom{display:grid;grid-template-columns:1fr auto auto;gap:7px}.mini{background:#172947;border:1px solid #345684;color:#d6eaff;font-size:12px;border-radius:12px;padding:11px}.tools{display:flex;gap:7px}.tools button{flex:1;border:1px solid #344c71;background:#17243c;border-radius:11px;color:#bcd0ee;padding:10px 5px;font-size:11px}.tools button.active{background:linear-gradient(130deg,#30486a,#263358);color:#fff;border-color:#71ddef}.foot{text-align:center;font-size:10px;line-height:1.7;color:#7289b4}#toast{position:fixed;top:10%;left:50%;transform:translateX(-50%);background:#3c2117;border:1px solid #ffb765;border-radius:15px;padding:11px 18px;opacity:0;pointer-events:none;z-index:100;font-size:13px;transition:opacity .22s;white-space:nowrap}#toast.show{opacity:1}
 @media(max-width:365px){.app{padding:9px 9px 20px;gap:8px}.logo{font-size:18px}.ribbon{font-size:11px}.modal{padding:18px 11px}.stage{border-radius:13px}}
 </style>
 </head>
 <body>
 <div class="app">
-<div class="top"><div class="logo">💥 一球灭城 <b>V10</b><span class="sub">PROFMONKEY · 爽感革命</span></div><div class="top-actions"><button class="small" id="soundBtn">🔊 音效</button><button class="small" id="helpBtn">❔ 玩法</button></div></div>
-<div class="ribbon"><div>🔥 <strong id="stageTitle">第 01 关 · 裂变狂欢</strong></div><em id="statusText">找到紫色裂变核，一发清屏！</em></div>
-<div class="stats"><div class="stat"><b id="comboText">0</b><span>🔥 本局最高连击</span></div><div class="stat"><b id="destroyText">0%</b><span>💥 城市摧毁率</span></div><div class="stat"><b id="shotsText">4</b><span>🎯 剩余发射</span></div></div>
-<div class="stage" id="stage"><canvas id="game" width="420" height="740" aria-label="一球灭城游戏画布"></canvas><div id="tip" class="game-tip">👆 拖动瞄准，松开发射 · 可直接点「一键开炮」</div>
+<div class="top"><div class="logo">🚘 飞车拆城 <b>V11</b><span class="sub">PROFMONKEY · 狂飙崩塌</span></div><div class="top-actions"><button class="small" id="soundBtn">🔊 音效</button><button class="small" id="helpBtn">❔ 玩法</button></div></div>
+<div class="ribbon"><div>🔥 <strong id="stageTitle">第 01 关 · 裂变狂欢</strong></div><em id="statusText">赛车冲向摩天楼，撞穿承重层！</em></div>
+<div class="stats"><div class="stat"><b id="comboText">0</b><span>🔥 最高破坏连击</span></div><div class="stat"><b id="destroyText">0%</b><span>🏙️ 建筑破坏率</span></div><div class="stat"><b id="shotsText">4</b><span>🚘 剩余赛车</span></div></div>
+<div class="stage" id="stage"><canvas id="game" width="420" height="740" aria-label="飞车拆城：赛车撞击建筑游戏画布"></canvas><div id="tip" class="game-tip">👆 拖动规划车道，松手撞楼 · 或点「一键出车」</div>
 <div class="panel" id="modalWrap"><div class="modal" id="modal"></div></div></div>
-<div class="progress-box"><span>⚡ 暴走能量 <b id="energyText">0%</b></span><div class="track"><div class="fill" id="energyFill"></div></div></div>
-<button class="power" id="powerBtn" disabled>⚡ 连击蓄能中 · 击碎建筑解锁「毁灭风暴」</button>
-<div class="bottom"><button class="cta hot" id="shootBtn">🚀 一键开炮</button><button class="mini" id="retryBtn">🔄 重开</button><button class="mini" id="stageBtn">🗺️ 关卡</button></div>
-<div class="tools"><button id="demoBtn">💣 爆爽试玩</button><button id="fastBtn">⏩ 1×速度</button><button id="photoBtn">📸 高光截图</button><button id="oldBtn">🏙️ 经典90关</button></div>
-<div class="foot">单文件离线可玩 · 实际游戏实时演算 · 本机存档<br>首次发射推荐点「一键开炮」，连续击中会充能，随时释放毁灭风暴！</div></div>
+<div class="progress-box"><span>🔥 氮气能量 <b id="energyText">0%</b></span><div class="track"><div class="fill" id="energyFill"></div></div></div>
+<button class="power" id="powerBtn" disabled>🔥 氮气蓄能中 · 撞毁建筑解锁「超级冲撞」</button>
+<div class="bottom"><button class="cta hot" id="shootBtn">🚘 一键出车</button><button class="mini" id="retryBtn">🔄 重开</button><button class="mini" id="stageBtn">🗺️ 关卡</button></div>
+<div class="tools"><button id="demoBtn">🏁 极速试玩</button><button id="fastBtn">⏩ 1×速度</button><button id="photoBtn">📸 高光截图</button><button id="oldBtn">🎮 经典90关</button></div>
+<div class="foot">手机浏览器直接玩 · 赛车与高楼均由 Canvas 实时绘制<br>承重层被撞毁，会引发整栋大楼的逐层崩塌；能量充满可释放氮气冲撞！</div></div>
 <div id="toast" role="status"></div>
 <script>
 'use strict';
 const W=420,H=740,C=document.getElementById('game'),ctx=C.getContext('2d',{alpha:false});
 const el=id=>document.getElementById(id);
-const palette={split:'#bb79ff',bomb:'#ff995e',laser:'#55eeff',shock:'#ff4d87',armor:'#9faccc',normal:'#5fa9ff',core:'#fff083',energy:'#89ffac'};
+const palette={split:'#ffa944',bomb:'#ff5031',laser:'#ffd56b',shock:'#fb743c',armor:'#c3a18f',normal:'#a88267',core:'#fff2b7',energy:'#eaffac'};
 let audio=null, muted=false, runTime=0, lastFrame=performance.now(), maxUnlocked=1, bestComboAll=0;
 try{maxUnlocked=Math.min(24,Math.max(1,+(localStorage.getItem('pm_ob_v10_unlocked')||1)));bestComboAll=+(localStorage.getItem('pm_ob_v10_combo')||0);muted=localStorage.getItem('pm_ob_v10_muted')==='1'}catch(e){}
 const T={playing:'playing',firing:'firing',won:'won',lost:'lost',demo:'demo'};
-const S={stage:1,state:T.playing,tiles:[],balls:[],particles:[],rings:[],beams:[],texts:[],queue:[],power:0,shots:4,score:0,combo:0,best:0,lastHit:-20,destroyed:0,total:0,run:0,fireClock:0,shake:0,flash:0,hitPause:0,autoWin:false,demo:false,aimX:210,aimY:250,drag:false,wind:0,slow:0,shotMode:'normal',waveCount:0,shotsFired:0,multiplier:1,cityH:0,perf:true};
-const LEVELS=['裂变狂欢','火花盛典','连锁反应','闪电游乐场','玻璃之城','激光扫射','重锤出击','霓虹雪崩','彩虹弹幕','核心爆破','磁暴夜空','大楼倒塌','装甲裂谷','星云能量','爆破专家','反应堆狂欢','一发清屏','末日霓虹','火力全开','连环爆裂','高楼风暴','超级奇点','百万连击','终极烟火'];
-const CHAPTERS=['第一章 · 上手就爽','第二章 · 烟火暴走','第三章 · 极限连击','第四章 · 全屏清城'];
+const S={stage:1,state:T.playing,tiles:[],balls:[],particles:[],rings:[],beams:[],texts:[],queue:[],power:0,shots:4,score:0,combo:0,best:0,lastHit:-20,destroyed:0,total:0,run:0,fireClock:0,shake:0,flash:0,hitPause:0,autoWin:false,demo:false,aimX:210,aimY:250,drag:false,wind:0,slow:0,shotMode:'normal',waveCount:0,shotsFired:0,multiplier:1,cityH:0,buildings:[],perf:true};
+const LEVELS=['街区首撞','火花盛典','连锁反应','闪电游乐场','玻璃之城','激光扫射','重锤出击','霓虹雪崩','彩虹弹幕','核心爆破','磁暴夜空','大楼倒塌','装甲裂谷','星云能量','爆破专家','反应堆狂欢','一发清屏','末日霓虹','火力全开','连环爆裂','高楼风暴','超级奇点','百万连击','终极烟火'];
+const CHAPTERS=['第一章 · 撞进城市','第二章 · 连锁坍塌','第三章 · 氮气狂飙','第四章 · 全城拆除'];
 let randomSeed=1;
 function reseed(seed){randomSeed=(seed>>>0)||1}function rand(){randomSeed=(Math.imul(randomSeed,1664525)+1013904223)>>>0;return randomSeed/4294967296}function rnd(a,b){return a+rand()*(b-a)}
 function clamp(x,a,b){return Math.max(a,Math.min(b,x))}function lerp(a,b,t){return a+(b-a)*t}
@@ -49,18 +49,33 @@ function format(n){return Math.round(n).toLocaleString('zh-CN')}
 function tileType(i,r,col,stage){if(stage===1){if(r===6&&[4,5].includes(col))return 'split';if(r===5&&[4,5,6].includes(col))return 'bomb';if(r===4&&col===5)return 'laser';if(r===3&&[4,5].includes(col))return 'shock';}
  if(stage===2&&r===5&&col===5)return 'bomb';if(stage===3&&r===3&&col===4)return 'shock';
  const t=rand(),lv=stage;if(t<.03+lv*.001)return 'core';if(t<.095+lv*.0015)return 'split';if(t<.19+lv*.002)return 'bomb';if(t<.245+lv*.002)return 'laser';if(t<.30+lv*.002)return 'shock';if(t<.42+lv*.001)return 'armor';return 'normal'}
-function loadStage(level=1,demo=false){closeModal();S.stage=clamp(level,1,24);S.state=demo?T.demo:T.playing;S.demo=demo;S.tiles=[];S.balls=[];S.particles=[];S.rings=[];S.beams=[];S.texts=[];S.queue=[];S.power=0;S.shots=demo?9:level<6?4:5;S.score=0;S.combo=0;S.best=0;S.destroyed=0;S.total=0;S.shake=0;S.flash=0;S.lastHit=-20;S.run=0;S.slow=0;S.hitPause=0;S.waveCount=0;S.chainBudget=level===1?5:4;S.superUsedThisShot=false;S.shotsFired=0;S.fireClock=0;S.autoWin=false;S.aimX=210;S.aimY=260;S.wind=0;S.drag=false;S.shotMode='normal';
+function loadStage(level=1,demo=false){closeModal();S.stage=clamp(level,1,24);S.buildings=[];S.state=demo?T.demo:T.playing;S.demo=demo;S.tiles=[];S.balls=[];S.particles=[];S.rings=[];S.beams=[];S.texts=[];S.queue=[];S.power=0;S.shots=demo?9:level<6?4:5;S.score=0;S.combo=0;S.best=0;S.destroyed=0;S.total=0;S.shake=0;S.flash=0;S.lastHit=-20;S.run=0;S.slow=0;S.hitPause=0;S.waveCount=0;S.chainBudget=level===1?5:4;S.superUsedThisShot=false;S.shotsFired=0;S.fireClock=0;S.autoWin=false;S.aimX=210;S.aimY=260;S.wind=0;S.drag=false;S.shotMode='normal';
  reseed(demo?9969:1000+level*11317);
- const pattern=(level-1)%6;const rows=demo?9:level<5?7:level<13?8:9;const cols=10;
- for(let c=0;c<cols;c++){let h=rows; if(pattern===0)h=rows-(c%4===0?2:0);if(pattern===1)h=rows-(c%3===0?2:0);if(pattern===2)h=rows-(Math.abs(c-4.5)<2?0:2);if(pattern===3)h=rows-(c===4||c===5?2:0);if(pattern===4)h=rows-(c%2===0?1:0);if(pattern===5)h=rows-(c<3||c>6?2:0);
- for(let row=0;row<h;row++){if(level>6&&row<4&&rand()<.075)continue;const type=demo?['bomb','split','laser','shock','core'][Math.floor(rand()*5)]:tileType(S.tiles.length,row,c,level);const hp=type==='armor'?(level>=12?3:2):type==='core'?(level>=10?2:1):1;
- const x=18+c*38.7,y=116+row*34.5;S.tiles.push({x,y,w:34.5,h:30,type,hp,maxHp:hp,alive:true,tint:rand(),t:rand()*10});S.total++;
- }}
- if(!demo&&level===1){const origin=S.tiles.find(b=>Math.abs(b.x-(18+5*38.7))<2&&Math.abs(b.y-(116+6*34.5))<2);if(origin){origin.type='split';origin.hp=origin.maxHp=1}const top=S.tiles.find(b=>Math.abs(b.x-(18+5*38.7))<2&&Math.abs(b.y-(116+5*34.5))<2);if(top)top.type='bomb'}
+ const pattern=(level-1)%6; const cols=10;const blockH=34.5,baseY=482;
+ // Five continuous multi-storey buildings. Each collision tile is a physical floor section,
+ // but their shared facades, roofs and signage form recognisable architecture.
+ const styles=['brick','glass','hotel','office','factory'];
+ const labels=['工厂','中央大厦','酒店','金融中心','科研楼'];
+ for(let group=0;group<5;group++){
+   const tall=[7,8,9,7,8][group];const variance=((level+group*3)%4===0?-1:0);
+   const floors=demo?8:clamp(tall+variance+(level>10&&group===2?1:0),6,9);
+   const x=18+group*2*38.7,top=baseY-floors*blockH;
+   S.buildings.push({id:group,x,top,w:73.2,h:floors*blockH,floors,style:styles[(group+Math.floor((level-1)/6))%5],label:labels[group],falling:false,glow:rnd(0,6)});
+   for(let row=0;row<floors;row++)for(let half=0;half<2;half++){
+      if(level>14&&row<3&&rand()<.045)continue;
+      const col=group*2+half;
+      let type=demo?['bomb','split','laser','shock','core'][Math.floor(rand()*5)]:tileType(S.tiles.length,row,col,level);
+      // Ground-floor weak points are readable, so crashing through the base is tactical.
+      if(row===floors-1&&half===1&&group===2&&level===1)type='split';
+      if(row===floors-2&&half===1&&group===2&&level===1)type='bomb';
+      const hp=type==='armor'?(level>=12?3:2):type==='core'?(level>=10?2:1):1;
+      S.tiles.push({x:x+half*38.7,y:top+row*blockH,w:34.5,h:30.5,type,hp,maxHp:hp,alive:true,tint:rand(),t:rand()*10,buildingId:group,row,floors});S.total++;
+   }
+ }
  if(demo){for(const b of S.tiles){b.hp=1;b.maxHp=1}}
- el('stageTitle').textContent=demo?'狂欢实验 · 解压无限炮':`第 ${String(level).padStart(2,'0')} 关 · ${LEVELS[level-1]}`;
- el('statusText').textContent=demo?'不计成绩 · 特效全开':level%6===0?'击穿装甲，激活全屏连击':'瞄准特殊核心，制造连锁爆炸';el('tip').classList.remove('off');autoAim();
- el('shootBtn').textContent='🚀 一键开炮';updateHUD();toast(demo?'💥 狂欢训练！尽情制造烟花':'🎯 瞄准紫色/橙色核心，打出漂亮连击！')}
+ el('stageTitle').textContent=demo?'城市狂飙 · 赛车无限冲撞':`第 ${String(level).padStart(2,'0')} 关 · ${LEVELS[level-1]}`;
+ el('statusText').textContent=demo?'不计成绩 · 氮气特效全开':level%6===0?'撞开结构层，触发连锁坍塌':'瞄准建筑底部的橙色弱点！';el('tip').classList.remove('off');autoAim();
+ el('shootBtn').textContent='🚘 一键出车';updateHUD();toast(demo?'🏁 城市狂飙！撞到哪儿炸到哪儿！':'🚘 撞穿大楼底层，整栋楼才会坍塌！')}
 function autoAim(){
  // Look for the first hittable block along each straight launch ray.
  // Prioritize reachable chain-reaction cores, rather than blindly firing into empty gaps.
@@ -84,23 +99,43 @@ function autoAim(){
  S.aimY=clamp(b.y+b.h/2,90,641);
  return true
 }
-function updateHUD(){el('comboText').textContent=S.best;el('destroyText').textContent=(S.total?Math.round(100*S.destroyed/S.total):0)+'%';el('shotsText').textContent=S.shots;el('energyText').textContent=Math.round(S.power)+'%';el('energyFill').style.width=S.power+'%';const ready=S.power>=100&&!S.superUsedThisShot;el('powerBtn').disabled=!ready||S.state===T.won||S.state===T.lost;el('powerBtn').classList.toggle('ready',ready);el('powerBtn').textContent=ready?'⚡🔥 毁灭风暴 READY！点击引爆全城':S.superUsedThisShot?'⚡ 已释放风暴 · 下一次发射后可再次释放':'⚡ 连击蓄能中 · 击碎建筑解锁「毁灭风暴」';el('shootBtn').disabled=S.state===T.firing||S.state===T.won||S.state===T.lost;}
+function updateHUD(){el('comboText').textContent=S.best;el('destroyText').textContent=(S.total?Math.round(100*S.destroyed/S.total):0)+'%';el('shotsText').textContent=S.shots;el('energyText').textContent=Math.round(S.power)+'%';el('energyFill').style.width=S.power+'%';const ready=S.power>=100&&!S.superUsedThisShot;el('powerBtn').disabled=!ready||S.state===T.won||S.state===T.lost;el('powerBtn').classList.toggle('ready',ready);el('powerBtn').textContent=ready?'🔥🚘 氮气风暴就绪！点击全城冲撞':S.superUsedThisShot?'🔥 氮气已释放 · 下一辆车可再次充能':'🔥 氮气蓄能中 · 撞毁建筑解锁「超级冲撞」';el('shootBtn').disabled=S.state===T.firing||S.state===T.won||S.state===T.lost;}
 function fire(){if(S.state!==T.playing&&S.state!==T.demo)return;if(S.shots<=0)return;closeModal();el('tip').classList.add('off');const dx=S.aimX-210,dy=S.aimY-679;const angle=Math.atan2(dx,Math.max(35,-dy));const a=clamp(angle,-1.14,1.14),speed=575;
- S.balls.push(makeBall(210,679,Math.sin(a)*speed,-Math.cos(a)*speed,1,'main'));S.state=T.firing;S.shots--;S.shotsFired++;S.fireClock=S.run;S.chainBudget=S.stage===1?5:4;S.superUsedThisShot=false;S.combo=0;S.lastHit=-20;S.slow=0;S.hitPause=0;sfx('shot');vibe(12);burst(210,679,'#74eefe',23,140);addRing(210,679,'#8eefff',20,48,.3);updateHUD()}
-function makeBall(x,y,vx,vy,scale=1,type='mini'){return{x,y,px:x,py:y,vx,vy,r:scale>0.9?7:scale>.7?5.5:4.4,life:0,bounces:0,damage:type==='main'?1:1,trail:[],type,glow:1}}
+ S.balls.push(makeBall(210,679,Math.sin(a)*speed,-Math.cos(a)*speed,1,'main'));S.state=T.firing;S.shots--;S.shotsFired++;S.fireClock=S.run;S.chainBudget=S.stage===1?5:4;S.superUsedThisShot=false;S.combo=0;S.lastHit=-20;S.slow=0;S.hitPause=0;sfx('shot');vibe(22);burst(210,679,'#ffb15d',25,145);addRing(210,679,'#ffb55e',20,48,.3);updateHUD()}
+function makeBall(x,y,vx,vy,scale=1,type='mini'){return{x,y,px:x,py:y,vx,vy,r:scale>0.9?8.4:scale>.7?6.3:5.5,life:0,bounces:0,damage:type==='main'?1:1,trail:[],type,glow:1}}
 function burst(x,y,color,n=22,power=200){const cnt=S.perf?Math.min(n,52):Math.min(n,22);for(let i=0;i<cnt;i++){if(S.particles.length>(S.perf?350:155))S.particles.shift();const a=rnd(0,Math.PI*2),v=rnd(power*.25,power),life=rnd(.28,.95);S.particles.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,life,max:life,color,size:rnd(1.3,5),gravity:rnd(60,190),kind:rand()<.3?'spark':'shard',turn:rnd(0,6)})}}
 function addRing(x,y,color,r=10,grow=160,life=.48){S.rings.push({x,y,r,grow,life,max:life,color})}function floater(x,y,t,color='#fff0a7',size=16){S.texts.push({x,y,text:t,color,size,life:.83,max:.83,vy:-72})}
 function beam(x1,y1,x2,y2,color='#75f5ff',life=.26,width=7){S.beams.push({x1,y1,x2,y2,color,life,max:life,width})}
-function charge(amount){const before=S.power;S.power=clamp(S.power+amount,0,100);if(before<100&&S.power===100&&!S.superUsedThisShot){sfx('charge');floater(210,555,'⚡ 毁灭风暴已充能！','#fff2a1',20);vibe(32);toast('⚡ 毁灭风暴 READY！现在可以释放！')}}
-function damage(b,hitX,hitY,direct=false){if(!b.alive)return; b.hp--;S.shake=Math.max(S.shake,direct?3.7:2.5);burst(hitX,hitY,palette[b.type],direct?13:8,direct?180:140);if(b.hp>0){floater(b.x+b.w/2,b.y,'破甲','#d9e2ff',11);return}b.alive=false;S.destroyed++;S.combo=S.run-S.lastHit<1.15?S.combo+1:1;S.lastHit=S.run;S.best=Math.max(S.best,S.combo);S.score+=100+S.combo*19;charge(direct?13:8);S.flash=Math.min(.18,S.flash+.028);if(S.combo%10===0){S.hitPause=.045;S.shake=8;floater(210,180,`🔥 ${S.combo} 连击！`,'#ffdc7d',30);sfx('boom');vibe(50)}else if(S.combo%5===0){floater(b.x,b.y-3,`${S.combo} HIT`,'#fffaaa',21);vibe(15)}
+function charge(amount){const before=S.power;S.power=clamp(S.power+amount,0,100);if(before<100&&S.power===100&&!S.superUsedThisShot){sfx('charge');floater(210,555,'🔥 氮气冲撞已就绪！','#fff2a1',20);vibe(32);toast('🔥 超级氮气 READY！可以撞穿全城！')}}
+function damage(b,hitX,hitY,direct=false){if(!b.alive)return; b.hp--;S.shake=Math.max(S.shake,direct?3.7:2.5);burst(hitX,hitY,palette[b.type],direct?13:8,direct?180:140);if(b.hp>0){floater(b.x+b.w/2,b.y,'破甲','#d9e2ff',11);return}b.alive=false;S.destroyed++;S.combo=S.run-S.lastHit<1.15?S.combo+1:1;S.lastHit=S.run;S.best=Math.max(S.best,S.combo);S.score+=100+S.combo*19;charge(direct?13:8);S.flash=Math.min(.18,S.flash+.028);checkBuildingFall(b);if(S.combo%10===0){S.hitPause=.045;S.shake=8;floater(210,180,`🔥 ${S.combo} 连击！`,'#ffdc7d',30);sfx('boom');vibe(50)}else if(S.combo%5===0){floater(b.x,b.y-3,`${S.combo} HIT`,'#fffaaa',21);vibe(15)}
  const cx=b.x+b.w/2,cy=b.y+b.h/2;burst(cx,cy,palette[b.type],b.type==='normal'?24:45,250);addRing(cx,cy,palette[b.type],8,165,.48);if(['bomb','core','split','laser','shock'].includes(b.type)&&S.chainBudget>0){S.chainBudget--;if(b.type==='bomb'||b.type==='core'){queueExplosion(cx,cy,b.type==='core'?95:68,b.type==='core'?2:1);sfx('boom')}else if(b.type==='split'){const n=S.demo?11:6;spawnFan(cx,cy,n);queueExplosion(cx,cy,43,1);floater(cx,cy,'×'+n+' 裂变','#e6baff',24);sfx('split')}else if(b.type==='laser'){beam(0,cy,W,cy,'#7afffe',.42,12);S.queue.push({at:S.run+.06,fn:()=>{for(const p of S.tiles)if(p.alive&&Math.abs(p.y+p.h/2-cy)<22)damage(p,p.x+15,cy)}});sfx('split')}else if(b.type==='shock'){lightning(cx,cy);sfx('split')}}
  if(S.combo>=15&&S.combo%7===0){const chanceTargets=S.tiles.filter(t=>t.alive);if(chanceTargets.length)S.queue.push({at:S.run+.08,fn:()=>{const t=chanceTargets[Math.floor(rand()*chanceTargets.length)];if(t.alive){beam(cx,cy,t.x+t.w/2,t.y+t.h/2,'#d7a0ff',.22,3);damage(t,t.x+t.w/2,t.y+t.h/2)}}})}updateHUD()}
+function checkBuildingFall(tile){
+ const building=S.buildings[tile.buildingId];if(!building||building.falling)return;
+ const feet=S.tiles.filter(t=>t.buildingId===building.id&&t.row===building.floors-1);
+ if(feet.length!==2||feet.some(t=>t.alive))return;
+ building.falling=true;S.shake=Math.max(S.shake,15);S.flash=.27;
+ floater(building.x+building.w/2,building.top+75,'建筑坍塌！','#ffdc85',22);
+ sfx('boom');vibe([25,25,48]);
+ let count=0;
+ for(let row=building.floors-2;row>=0;row--){
+   const targets=S.tiles.filter(t=>t.buildingId===building.id&&t.row===row&&t.alive);
+   for(const t of targets){const delay=.14+count*.065;
+     S.queue.push({at:S.run+delay,fn:()=>{
+       if(!t.alive)return;
+       burst(t.x+t.w/2,t.y+t.h/2,'#ffbc7b',18,250);
+       addRing(t.x+t.w/2,t.y+t.h/2,'#ffb04d',8,125,.36);
+       while(t.alive)damage(t,t.x+t.w/2,t.y+t.h/2,false);
+     }});
+   }count++;
+ }
+}
 function spawnFan(x,y,num){const limit=S.perf?55:30;const n=Math.min(num,limit-S.balls.length);for(let i=0;i<n;i++){const a=-Math.PI+.17+(i+.5)*(Math.PI-.34)/n, v=rnd(480,625);S.balls.push(makeBall(x,y,Math.cos(a)*v,Math.sin(a)*v,.7))}}
 function spawnBalls(x,y,num,start=0,speed=455){const limit=S.perf?55:30;const n=Math.min(num,limit-S.balls.length);for(let i=0;i<n;i++){const angle=start+(i+1)*Math.PI*2/(n+1)+rnd(-.12,.12);const v=speed*rnd(.83,1.14);S.balls.push(makeBall(x,y,Math.cos(angle)*v,Math.sin(angle)*v,.65))}}
 function queueExplosion(x,y,r,explosionDamage=1){addRing(x,y,'#ffae74',12,r*2,.4);S.shake=9;S.flash=.16;burst(x,y,'#ff995e',65,320);const targets=S.tiles.filter(t=>t.alive&&Math.hypot((t.x+t.w/2)-x,(t.y+t.h/2)-y)<r);
  targets.sort((a,b)=>Math.hypot(a.x-x,a.y-y)-Math.hypot(b.x-x,b.y-y));for(let i=0;i<targets.length;i++){let b=targets[i];S.queue.push({at:S.run+.04+(i%10)*.040,fn:()=>{if(!b.alive)return;for(let k=0;k<explosionDamage;k++)damage(b,b.x+b.w/2,b.y+b.h/2)}})} }
 function lightning(x,y){let current={x,y};const targets=S.tiles.filter(b=>b.alive).sort((a,b)=>Math.hypot(a.x-x,a.y-y)-Math.hypot(b.x-x,b.y-y)).slice(0,S.demo?9:5);targets.forEach((b,i)=>{const bx=b.x+b.w/2,by=b.y+b.h/2;S.queue.push({at:S.run+i*.08,fn:()=>{beam(current.x,current.y,bx,by,'#83f5ff',.26,6);current={x:bx,y:by};damage(b,bx,by)}})})}
-function windStorm(){if(S.power<100||S.superUsedThisShot||S.state===T.won||S.state===T.lost)return;S.superUsedThisShot=true;S.power=0;S.shake=18;S.flash=.65;S.slow=.22;sfx('power');vibe([70,30,100]);floater(210,165,'⚡ 毁 灭 风 暴 ⚡','#fff2a0',34);
+function windStorm(){if(S.power<100||S.superUsedThisShot||S.state===T.won||S.state===T.lost)return;S.superUsedThisShot=true;S.power=0;S.shake=18;S.flash=.65;S.slow=.22;sfx('power');vibe([70,30,100]);floater(210,165,'🔥 氮 气 风 暴 🔥','#fff2a0',34);
  const targets=S.tiles.filter(b=>b.alive);const count=Math.min(S.demo?36:25,targets.length);targets.sort((a,b)=>a.hp-b.hp);for(let i=0;i<count;i++){const b=targets[i];S.queue.push({at:S.run+.12+i*.035,fn:()=>{if(!b.alive)return;beam(210,85,b.x+b.w/2,b.y+b.h/2,i%2?'#ffac71':'#66efff',.26,4);damage(b,b.x+b.w/2,b.y+b.h/2);if(b.alive)damage(b,b.x+b.w/2,b.y+b.h/2)}})}
  spawnBalls(210,155,S.demo?25:13,rnd(0,3),520);for(let i=0;i<6;i++)addRing(210,300, i%2?'#f6b8ff':'#ffe99c',10,320+i*24,.55+i*.06);S.state=T.firing;updateHUD()}
 function reflectTile(ball,b){const cx=clamp(ball.x,b.x,b.x+b.w),cy=clamp(ball.y,b.y,b.y+b.h),dx=ball.x-cx,dy=ball.y-cy;if(dx*dx+dy*dy>ball.r*ball.r)return false;const overlapX=Math.min(ball.x+ball.r-b.x,b.x+b.w-ball.x+ball.r),overlapY=Math.min(ball.y+ball.r-b.y,b.y+b.h-ball.y+ball.r);
@@ -121,37 +156,126 @@ function tick(dt){runTime+=dt;S.run+=dt;S.shake=Math.max(0,S.shake-27*dt);S.flas
  }
  if(!alive)S.balls.splice(i,1)}
  if(S.balls.length===0&&S.queue.length===0&&S.run-S.fireClock>.70){S.state=S.demo?T.demo:T.playing;const rate=S.destroyed/Math.max(1,S.total);const target=S.demo?.99:S.stage<=3?.58:S.stage<=10?.66:.72;
- if(!S.demo&&rate>=target){win()}else if(S.shots<=0&&!S.demo){lose()}else if(S.demo&&S.shots<=0){loadStage(S.stage,true)}else{autoAim();toast('🎯 再来一发！瞄准特殊核心');updateHUD()}}
+ if(!S.demo&&rate>=target){win()}else if(S.shots<=0&&!S.demo){lose()}else if(S.demo&&S.shots<=0){loadStage(S.stage,true)}else{autoAim();toast('🏎️ 换辆赛车，再撞一次承重层！');updateHUD()}}
  }
 function win(){S.state=T.won;sfx('win');vibe([45,30,80]);const percent=Math.round(100*S.destroyed/S.total),stars=S.shotsFired<=2?3:S.shotsFired<=3?2:1;
  maxUnlocked=Math.max(maxUnlocked,Math.min(24,S.stage+1));bestComboAll=Math.max(bestComboAll,S.best);try{localStorage.setItem('pm_ob_v10_unlocked',maxUnlocked);localStorage.setItem('pm_ob_v10_combo',bestComboAll)}catch(e){}
- showModal(`<div class="big">🏆</div><div class="tiny">LEVEL ${S.stage} · 成功清城</div><h2 style="color:#fff1a6">连锁爆破成功！</h2><div class="score">${percent}% 摧毁</div><p>🔥 ${S.best} 连击　·　🏅 ${'⭐'.repeat(stars)}<br>一局只需几十秒，挑战下一张更刺激的城市！</p><div class="row"><button class="cta hot" onclick="loadStage(${Math.min(24,S.stage+1)})">🚀 下一关</button><button class="cta dark" onclick="loadStage(${S.stage})">🔄 再爽一把</button></div><div class="row"><button class="cta dark" onclick="savePoster()">📸 保存战绩图</button><button class="cta dark" onclick="openStages()">🗺️ 选关</button></div>`);updateHUD()}
-function lose(){S.state=T.lost;const percent=Math.round(100*S.destroyed/S.total);showModal(`<div class="big">💥</div><h2>差一点就清城！</h2><div class="score">${percent}%</div><p>🔥 最高 ${S.best} 连击<br>试试瞄准紫色裂变核和橙色炸弹，能量满了立刻开风暴！</p><div class="row"><button class="cta hot" onclick="loadStage(${S.stage})">⚡ 再爽一局</button><button class="cta dark" onclick="loadStage(${S.stage},true)">🎆 狂欢模式</button></div>`);updateHUD()}
+ showModal(`<div class="big">🏆</div><div class="tiny">LEVEL ${S.stage} · 成功清城</div><h2 style="color:#fff1a6">飞车拆城成功！</h2><div class="score">${percent}% 摧毁</div><p>🔥 ${S.best} 连击　·　🏅 ${'⭐'.repeat(stars)}<br>一辆赛车撞出一场坍塌！下一条街等你拆！</p><div class="row"><button class="cta hot" onclick="loadStage(${Math.min(24,S.stage+1)})">🚀 下一关</button><button class="cta dark" onclick="loadStage(${S.stage})">🔄 再爽一把</button></div><div class="row"><button class="cta dark" onclick="savePoster()">📸 保存战绩图</button><button class="cta dark" onclick="openStages()">🗺️ 选关</button></div>`);updateHUD()}
+function lose(){S.state=T.lost;const percent=Math.round(100*S.destroyed/S.total);showModal(`<div class="big">💥</div><h2>还差一点就撞穿全城！</h2><div class="score">${percent}%</div><p>🔥 最高 ${S.best} 连击<br>试试从底部撞断建筑承重层，氮气满了就放大招！</p><div class="row"><button class="cta hot" onclick="loadStage(${S.stage})">⚡ 再爽一局</button><button class="cta dark" onclick="loadStage(${S.stage},true)">🎆 狂欢模式</button></div>`);updateHUD()}
 function rounded(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r)}
-function drawBg(){const grd=ctx.createLinearGradient(0,0,0,740);grd.addColorStop(0,'#121238');grd.addColorStop(.46,'#131d48');grd.addColorStop(1,'#0b1230');ctx.fillStyle=grd;ctx.fillRect(0,0,W,H);
- ctx.save();for(let i=0;i<65;i++){const x=(i*87.1+S.stage*39)%W,y=(i*97.77+25)%510;ctx.fillStyle=`rgba(169,215,255,${.15+.22*Math.sin(runTime*1.5+i)**2})`;ctx.fillRect(x,y,1.6,1.6)}ctx.restore();
- ctx.fillStyle='#171c43';for(let i=0;i<22;i++){const h=65+(i*47)%110;ctx.fillRect(i*24-12,570-h,23,h)}
- ctx.fillStyle='#5cd9ff0e';for(let i=0;i<22;i++)for(let j=0;j<5;j++)if((i*7+j*3)%5!==0)ctx.fillRect(i*24,475+j*13,3,5);
- ctx.fillStyle='#131d3a';ctx.fillRect(0,675,W,65);ctx.fillStyle='#26385f';ctx.fillRect(0,686,W,5);for(let x=10;x<420;x+=64){ctx.fillStyle='#d8c76855';ctx.fillRect(x,716,33,3)}
- const halo=ctx.createRadialGradient(210,365,20,210,365,300);halo.addColorStop(0,'#8639da25');halo.addColorStop(1,'#25114a00');ctx.fillStyle=halo;ctx.fillRect(0,0,W,H)}
-function drawTile(b){if(!b.alive)return;let col=palette[b.type];const pulse=.60+.17*Math.sin(runTime*3+b.t);ctx.save();ctx.shadowBlur=b.type==='normal'?6:17;ctx.shadowColor=col;const grd=ctx.createLinearGradient(b.x,b.y,b.x+b.w,b.y+b.h);grd.addColorStop(0,col);grd.addColorStop(.12,'#29355c');grd.addColorStop(1,'#172343');ctx.fillStyle=grd;rounded(b.x,b.y,b.w,b.h,5);ctx.fill();ctx.shadowBlur=0;ctx.strokeStyle=col;ctx.lineWidth=1.25;ctx.stroke();
- ctx.fillStyle=b.type==='armor'?'#e0e5f5aa':'#c9f0ff44';ctx.fillRect(b.x+5,b.y+7,7,7);ctx.fillRect(b.x+18,b.y+7,7,7);ctx.fillRect(b.x+5,b.y+18,7,4);ctx.fillRect(b.x+18,b.y+18,7,4);
- if(b.type!=='normal'&&b.type!=='armor'){ctx.fillStyle=col;ctx.globalAlpha=pulse;ctx.fillRect(b.x+4,b.y+5,b.w-8,b.h-10);ctx.globalAlpha=1;ctx.fillStyle='#06112e';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 20px system-ui';ctx.fillText(({split:'✳',bomb:'✹',laser:'✦',shock:'ϟ',core:'★'})[b.type],b.x+b.w/2,b.y+b.h/2+1)}
- if(b.maxHp>1){ctx.fillStyle='#eef0ff';ctx.font='bold 11px system-ui';ctx.textAlign='center';ctx.fillText(String(b.hp),b.x+b.w-7,b.y+8)}ctx.restore()}
-function drawAim(){if(S.state!==T.playing&&S.state!==T.demo)return;let dx=S.aimX-210,dy=S.aimY-679,angle=clamp(Math.atan2(dx,Math.max(35,-dy)),-1.14,1.14);let vx=Math.sin(angle),vy=-Math.cos(angle),x=210,y=673;ctx.save();ctx.setLineDash([8,11]);ctx.strokeStyle='#b5fcffb7';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x,y);for(let i=0;i<76;i++){x+=vx*7;y+=vy*7;if(x<18){x=18;vx*=-1}if(x>W-18){x=W-18;vx*=-1}if(y<85)break;ctx.lineTo(x,y)}ctx.stroke();ctx.setLineDash([]);ctx.strokeStyle='#ffffffbb';ctx.lineWidth=1;ctx.beginPath();ctx.arc(x,y,10,0,Math.PI*2);ctx.stroke();ctx.restore()}
-function drawCannon(){ctx.save();ctx.translate(210,682);const angle=clamp(Math.atan2(S.aimX-210,Math.max(35,679-S.aimY)),-1.14,1.14);ctx.rotate(angle);ctx.shadowColor='#40dfff';ctx.shadowBlur=24;const beam=ctx.createLinearGradient(-8,-30,8,30);beam.addColorStop(0,'#f1ffff');beam.addColorStop(.35,'#5de2fc');beam.addColorStop(1,'#4059da');ctx.fillStyle=beam;rounded(-11,-32,22,55,7);ctx.fill();ctx.restore();ctx.shadowBlur=28;ctx.shadowColor='#4ceaff';ctx.fillStyle='#95ecff';ctx.beginPath();ctx.arc(210,686,22,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.fillStyle='#20376c';ctx.beginPath();ctx.arc(210,686,13,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#e1ffff';ctx.lineWidth=3;ctx.stroke();ctx.save();ctx.font='800 12px system-ui';ctx.fillStyle='#8cdbef';ctx.textAlign='center';ctx.fillText('DRAG TO AIM · RELEASE TO FIRE',210,726);ctx.restore()}
-function drawBgraffiti(){ctx.save();ctx.globalAlpha=.07;ctx.fillStyle='#d4f1ff';ctx.font='bold 60px system-ui';ctx.textAlign='center';ctx.fillText('ONE BALL',210,73);ctx.restore()}
+function drawBg(){
+ const g=ctx.createLinearGradient(0,0,0,H);
+ g.addColorStop(0,'#1a0c13');g.addColorStop(.40,'#7d3326');g.addColorStop(.67,'#422016');g.addColorStop(1,'#150d0a');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ // Neon sunset and atmospheric haze behind the actual building scene.
+ let haze=ctx.createRadialGradient(210,390,18,210,390,310);
+ haze.addColorStop(0,'#ffb15b77');haze.addColorStop(.52,'#ff753a24');haze.addColorStop(1,'#ff500000');ctx.fillStyle=haze;ctx.fillRect(0,65,W,520);
+ for(let i=0;i<29;i++){const x=i*17-5,h=48+(i*39)%133;
+   ctx.fillStyle=i%3===0?'#341a1b':'#422124';ctx.fillRect(x,490-h,15,h);
+   ctx.fillStyle='#ffc48622';for(let j=0;j<7;j++)if((i*7+j*3)%5!==0)ctx.fillRect(x+3+(j%2)*5,500-h+7+Math.floor(j/2)*14,2,4);
+ }
+ // Elevated road with perspective lanes and launch rail.
+ const road=ctx.createLinearGradient(0,492,0,H);road.addColorStop(0,'#322b29');road.addColorStop(1,'#111315');ctx.fillStyle=road;ctx.beginPath();ctx.moveTo(0,502);ctx.lineTo(W,502);ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.fill();
+ ctx.fillStyle='#685045';ctx.fillRect(0,496,W,6);
+ for(let i=0;i<7;i++){const d=i/7,yy=520+Math.pow(d,1.8)*208;ctx.strokeStyle='rgba(255,194,111,'+(0.16+d*.55)+')';ctx.lineWidth=1+d*2;ctx.beginPath();ctx.moveTo(210+(i%2?1:-1)*(30+d*115),yy);ctx.lineTo(210+(i%2?1:-1)*(32+d*125),yy+12+d*4);ctx.stroke()}
+ ctx.strokeStyle='#ffbf6455';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(175,503);ctx.lineTo(55,740);ctx.moveTo(245,503);ctx.lineTo(365,740);ctx.stroke();
+ for(let y=526;y<730;y+=35){ctx.fillStyle='#ffc77b70';ctx.fillRect(208,y,4,12)}
+ // Warm drifting ash instead of sci-fi blue dots.
+ for(let i=0;i<45;i++){const x=(i*91.43+runTime*(6+i%5))%W,y=(i*51.77+S.stage*17+runTime*(2+i%3))%500;
+   ctx.fillStyle=`rgba(255,${124+i%90},70,${.12+.23*Math.sin(runTime+i)**2})`;ctx.fillRect(x,y,1+(i%3)*.5,1+(i%3)*.5)}
+}
+function drawBuildingGroup(building){
+ const occupied=S.tiles.filter(t=>t.alive&&t.buildingId===building.id);
+ if(!occupied.length)return;
+ const {x,top,w,h,style}=building;
+ const profile={brick:['#75422f','#43221d','#b7754e'],glass:['#6d776b','#1a2c2f','#b5aa7b'],hotel:['#997057','#49352e','#e4ad6d'],office:['#70645e','#28242b','#d8a26f'],factory:['#745849','#322b27','#d68a54']}[style];
+ // Keep the facade clipped to surviving floor sections; destroyed layers become genuine holes.
+ ctx.save();const clipping=new Path2D();for(const t of occupied)clipping.rect(t.x-2,t.y-1,t.w+4,t.h+3);ctx.clip(clipping);
+ ctx.shadowBlur=13;ctx.shadowColor='#100b08aa';ctx.fillStyle='#180d09';ctx.fillRect(x-2,top-2,w+7,h+6);ctx.shadowBlur=0;
+ const front=ctx.createLinearGradient(x,top,x+w,top);front.addColorStop(0,profile[1]);front.addColorStop(.12,profile[0]);front.addColorStop(.76,profile[0]);front.addColorStop(1,profile[1]);ctx.fillStyle=front;ctx.fillRect(x,top,w,h);
+ // A subtle side wall adds a 2.5D architectural silhouette.
+ ctx.fillStyle='#0e1415b3';ctx.fillRect(x+w-8,top,8,h);
+ if(style==='brick'||style==='factory'){
+   ctx.fillStyle='#21120f55';for(let yy=top+6;yy<top+h;yy+=12){ctx.fillRect(x+2,yy,w-6,1);for(let xx=x+((yy-top)/12%2)*10;xx<x+w;xx+=24)ctx.fillRect(xx,yy-11,1,11)}
+ }
+ const floorH=34.5;
+ for(let floor=0;floor<building.floors;floor++){
+   const fy=top+floor*floorH;
+   ctx.fillStyle=profile[2];ctx.globalAlpha=.62;ctx.fillRect(x,fy,w,2.8);ctx.globalAlpha=1;
+   if(style==='hotel'&&floor%2===1){ctx.fillStyle='#2c2526';ctx.fillRect(x+4,fy+25,w-18,4);ctx.fillStyle='#be835e';ctx.fillRect(x+5,fy+26,w-19,1)}
+   const n=style==='factory'?3:style==='glass'?5:4;
+   for(let j=0;j<n;j++){
+      const ww=(w-14)/n-3,wx=x+7+j*(w-14)/n,wy=fy+9,wh=style==='factory'?12:16;
+      const warm=(floor*7+j*13+building.id*17+S.stage)%9;
+      ctx.fillStyle=warm<3?'#ffd29c':warm<6?'#90613f':'#253236';ctx.fillRect(wx,wy,ww,wh);
+      ctx.fillStyle='#e8c39855';ctx.fillRect(wx,wy,ww,2);
+      ctx.fillStyle='#241d1b';ctx.fillRect(wx+ww/2-.7,wy,1.5,wh);
+      if(style==='glass'){ctx.fillStyle='#d3cbb744';ctx.fillRect(wx+2,wy+3,1.2,wh-4)}
+      ctx.fillStyle='#170e0e88';ctx.fillRect(wx,wy+wh-2,ww,2);
+   }
+ }
+ // Concrete ribs, structural beams and corner decorations.
+ ctx.fillStyle=profile[2];ctx.globalAlpha=.42;ctx.fillRect(x+2,top,3,h);ctx.fillRect(x+w-13,top,3,h);ctx.globalAlpha=1;
+ if(style==='hotel'||style==='office'){ctx.fillStyle='#f6c28f66';ctx.fillRect(x+7,top+40,w-22,2)}
+ ctx.restore();
+ // Roof geometry and distinct landmarks (not little floating cubes).
+ const topIntact=S.tiles.some(t=>t.alive&&t.buildingId===building.id&&t.row===0);
+ if(topIntact){ctx.save();ctx.fillStyle=profile[1];ctx.fillRect(x-4,top-8,w+7,8);
+   ctx.fillStyle=profile[2];ctx.fillRect(x-4,top-9,w+8,2);
+   if(style==='office'||style==='glass'){ctx.fillStyle='#44382e';ctx.fillRect(x+30,top-19,12,10);ctx.strokeStyle='#ffc886';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x+36,top-20);ctx.lineTo(x+36,top-37);ctx.stroke();ctx.fillStyle='#ff7e45';ctx.fillRect(x+33,top-39,6,5)}
+   if(style==='factory'){ctx.fillStyle='#785244';ctx.fillRect(x+8,top-28,13,26);ctx.fillStyle='#b36747';ctx.fillRect(x+6,top-29,17,4);ctx.fillStyle='#d39c8477';for(let k=0;k<3;k++){const xx=x+16+k*6+Math.sin(runTime+k)*5;ctx.beginPath();ctx.arc(xx,top-42-k*11,6+k*3,0,Math.PI*2);ctx.fill()}}
+   ctx.restore();
+ }
+ // Integrated signage visible at the top of each office tower.
+ ctx.save();ctx.textAlign='center';ctx.font='bold 10px system-ui';ctx.shadowColor='#ffe6b0';ctx.shadowBlur=5;ctx.fillStyle='#ffe5b2';ctx.fillText(building.label,x+w/2-3,top+17);ctx.restore();
+ // Render power-ups as warning lights or impact targets integrated into the facade.
+ for(const b of occupied){if(b.type==='normal')continue;
+   const cx=b.x+b.w/2,cy=b.y+b.h/2,kind=b.type;
+   ctx.save();ctx.shadowColor=palette[kind];ctx.shadowBlur=kind==='armor'?2:11;
+   ctx.fillStyle=kind==='armor'?'#b4a89d':kind==='split'?'#ffb53b':kind==='core'?'#fff5a3':'#ff6940';
+   if(kind==='armor'){ctx.strokeStyle='#ddcdc0';ctx.lineWidth=2;ctx.strokeRect(cx-13,cy-10,26,20);ctx.fillStyle='#ae9382';for(let k=0;k<4;k++)ctx.fillRect(cx-8+(k%2)*13,cy-5+Math.floor(k/2)*8,4,4)}
+   else {ctx.beginPath();ctx.arc(cx,cy,kind==='core'?11:8,0,Math.PI*2);ctx.fill();ctx.fillStyle='#442012';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='bold 12px system-ui';ctx.fillText(({split:'✳',bomb:'!',laser:'↔',shock:'ϟ',core:'★'})[kind],cx,cy+.5)}
+   if(b.hp<b.maxHp){ctx.strokeStyle='#fff2d0';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(cx-10,cy-10);ctx.lineTo(cx-3,cy+2);ctx.lineTo(cx+8,cy+10);ctx.stroke()}
+   ctx.restore();
+ }
+}
+function drawCityBuildings(){for(const b of S.buildings)drawBuildingGroup(b)}
+function drawCar(b,parked=false){
+ const ang=parked?0:Math.atan2(b.vy,b.vx)+Math.PI/2;
+ const sc=parked?1.24:b.type==='main'?1.15:.83;
+ ctx.save();ctx.translate(b.x,b.y);ctx.rotate(ang);ctx.scale(sc,sc);
+ ctx.shadowColor='#000000dd';ctx.shadowBlur=8;ctx.fillStyle='#05090c';ctx.fillRect(-8,-12,16,25);ctx.shadowBlur=0;
+ // Wheels and light glint give a recognisable top-down sports-car silhouette.
+ ctx.fillStyle='#060807';for(const dx of [-9,6])for(const dy of [-8,7]){ctx.fillRect(dx,dy,3.4,8)}
+ const body=ctx.createLinearGradient(-7,0,7,0);body.addColorStop(0,'#981c18');body.addColorStop(.28,'#ff6936');body.addColorStop(.54,'#ffdc7b');body.addColorStop(1,'#ac2c16');ctx.fillStyle=body;
+ ctx.beginPath();ctx.moveTo(-5,-13);ctx.lineTo(5,-13);ctx.lineTo(8,-7);ctx.lineTo(8,10);ctx.quadraticCurveTo(8,12,6,12);ctx.lineTo(-6,12);ctx.quadraticCurveTo(-8,12,-8,10);ctx.lineTo(-8,-7);ctx.closePath();ctx.fill();
+ ctx.fillStyle='#251e20';ctx.fillRect(-5,-5,10,9);ctx.fillStyle='#ffc37599';ctx.fillRect(-4,-4,8,2);ctx.fillStyle='#ffe4a1';ctx.fillRect(-6,-12,4,2.5);ctx.fillRect(2,-12,4,2.5);
+ ctx.fillStyle='#ff321f';ctx.fillRect(-5.5,9,4,2);ctx.fillRect(1.5,9,4,2);
+ ctx.fillStyle='#241714';ctx.fillRect(-10,9,20,2.5); // spoiler
+ if(!parked){ctx.shadowBlur=12;ctx.shadowColor='#ffb442';ctx.fillStyle='#ffe28e';const t=runTime*22+b.life*11;ctx.beginPath();ctx.moveTo(-3,12);ctx.lineTo(-1,18+Math.sin(t)*4);ctx.lineTo(0,12);ctx.lineTo(1,18+Math.cos(t)*4);ctx.lineTo(3,12);ctx.fill()}
+ ctx.restore();
+}
+function drawAim(){if(S.state!==T.playing&&S.state!==T.demo)return;let dx=S.aimX-210,dy=S.aimY-679,angle=clamp(Math.atan2(dx,Math.max(35,-dy)),-1.14,1.14);let vx=Math.sin(angle),vy=-Math.cos(angle),x=210,y=673;ctx.save();ctx.setLineDash([8,11]);ctx.strokeStyle='#ffd08aaa';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x,y);for(let i=0;i<76;i++){x+=vx*7;y+=vy*7;if(x<18){x=18;vx*=-1}if(x>W-18){x=W-18;vx*=-1}if(y<85)break;ctx.lineTo(x,y)}ctx.stroke();ctx.setLineDash([]);ctx.strokeStyle='#fff3d2cc';ctx.lineWidth=1;ctx.beginPath();ctx.arc(x,y,9,0,Math.PI*2);ctx.stroke();ctx.restore()}
+function drawCannon(){
+ // Roadside starting grid, with an actual car waiting to launch.
+ ctx.save();ctx.fillStyle='#342821';ctx.fillRect(180,665,60,44);ctx.fillStyle='#ffc78266';ctx.fillRect(180,665,60,3);
+ ctx.strokeStyle='#ffd1a477';ctx.lineWidth=2;ctx.strokeRect(182,669,56,35);
+ drawCar({x:210,y:686,vx:0,vy:-1,type:'main',life:0},true);
+ ctx.font='900 11px system-ui';ctx.fillStyle='#ffdcaa';ctx.textAlign='center';ctx.fillText('拖动选择撞击角度 · 松开出车',210,730);ctx.restore()}
+function drawBgraffiti(){ctx.save();ctx.globalAlpha=.07;ctx.fillStyle='#ffe0a5';ctx.font='bold 58px system-ui';ctx.textAlign='center';ctx.fillText('CAR CRASH',210,73);ctx.restore()}
 function drawEffects(){for(const r of S.rings){ctx.save();ctx.strokeStyle=r.color;ctx.globalAlpha=Math.pow(r.life/r.max,1.4);ctx.lineWidth=4*(r.life/r.max);ctx.shadowBlur=20;ctx.shadowColor=r.color;ctx.beginPath();ctx.arc(r.x,r.y,r.r,0,Math.PI*2);ctx.stroke();ctx.restore()}
  for(const l of S.beams){ctx.save();ctx.globalAlpha=l.life/l.max;ctx.strokeStyle=l.color;ctx.lineWidth=l.width+Math.random()*2;ctx.shadowBlur=23;ctx.shadowColor=l.color;ctx.beginPath();ctx.moveTo(l.x1,l.y1);ctx.lineTo(l.x2,l.y2);ctx.stroke();ctx.strokeStyle='#fff';ctx.lineWidth=1.5;ctx.stroke();ctx.restore()}
  for(const p of S.particles){const alpha=p.life/p.max;ctx.globalAlpha=alpha;ctx.fillStyle=p.color;if(p.kind==='shard'){ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.turn+p.life*5);ctx.fillRect(-p.size/2,-p.size/2,p.size*1.9,p.size*.7);ctx.restore()}else{ctx.fillRect(p.x,p.y,p.size,p.size)}}ctx.globalAlpha=1;
- for(const b of S.balls){for(let i=1;i<b.trail.length;i++){const t=b.trail[i];ctx.fillStyle=`rgba(129,242,255,${.03+.18*i/b.trail.length})`;ctx.beginPath();ctx.arc(t[0],t[1],b.r*i/b.trail.length,0,Math.PI*2);ctx.fill()}ctx.save();ctx.shadowBlur=17;ctx.shadowColor=b.type==='main'?'#ffe17b':'#6cecff';ctx.fillStyle=b.type==='main'?'#fff0b0':'#abfaff';ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.fill();ctx.restore()}
+ for(const b of S.balls){for(let i=1;i<b.trail.length;i++){const t=b.trail[i],alpha=(i/b.trail.length)*.36;
+ ctx.fillStyle=`rgba(255,168,67,${alpha})`;ctx.beginPath();ctx.arc(t[0],t[1],Math.max(2,b.r*i/b.trail.length),0,Math.PI*2);ctx.fill()}
+ drawCar(b);
+ }
  for(const t of S.texts){ctx.save();ctx.globalAlpha=clamp(t.life/t.max,0,1);ctx.textAlign='center';ctx.shadowBlur=17;ctx.shadowColor=t.color;ctx.font=`1000 ${t.size}px system-ui`;ctx.lineWidth=4;ctx.strokeStyle='#1c143b';ctx.strokeText(t.text,t.x,t.y);ctx.fillStyle=t.color;ctx.fillText(t.text,t.x,t.y);ctx.restore()}
  if(S.flash>0){ctx.fillStyle=`rgba(255,224,234,${Math.min(.48,S.flash*.5)})`;ctx.fillRect(0,0,W,H)} }
-function draw(){ctx.save();if(S.shake>0){ctx.translate((Math.random()-.5)*S.shake,(Math.random()-.5)*S.shake)}drawBg();drawBgraffiti();ctx.save();ctx.shadowColor='#874fff33';ctx.shadowBlur=19;for(const t of S.tiles)drawTile(t);ctx.restore();drawAim();drawCannon();drawEffects();
- ctx.fillStyle='#0b1735cc';rounded(10,13,150,34,12);ctx.fill();ctx.textAlign='left';ctx.fillStyle='#fff4bd';ctx.font='bold 16px system-ui';ctx.fillText('🔥 '+S.combo+' HIT',21,36);ctx.textAlign='right';ctx.fillStyle='#8df6ff';ctx.fillText(format(S.score)+' 分',402,36);
- ctx.fillStyle='#ccd8ff';ctx.font='bold 11px system-ui';ctx.textAlign='center';ctx.fillText(S.demo?'FREE PLAY · 烟火狂欢':`${CHAPTERS[Math.floor((S.stage-1)/6)]} · 目标 ${S.stage<=3?'58':S.stage<=10?'66':'72'}%`,210,101);
+function draw(){ctx.save();if(S.shake>0){ctx.translate((Math.random()-.5)*S.shake,(Math.random()-.5)*S.shake)}drawBg();drawBgraffiti();ctx.save();ctx.shadowColor='#ffb74a33';ctx.shadowBlur=19;drawCityBuildings();ctx.restore();drawAim();drawCannon();drawEffects();
+ ctx.fillStyle='#2a1810df';rounded(10,13,150,34,12);ctx.fill();ctx.textAlign='left';ctx.fillStyle='#fff4bd';ctx.font='bold 16px system-ui';ctx.fillText('🔥 '+S.combo+' HIT',21,36);ctx.textAlign='right';ctx.fillStyle='#ffcb88';ctx.fillText(format(S.score)+' 分',402,36);
+ ctx.fillStyle='#ffddbb';ctx.font='bold 11px system-ui';ctx.textAlign='center';ctx.fillText(S.demo?'FREE DRIVE · 城市冲撞':`${CHAPTERS[Math.floor((S.stage-1)/6)]} · 目标 ${S.stage<=3?'58':S.stage<=10?'66':'72'}%`,210,101);
  ctx.restore()}
-function loop(time){const raw=clamp((time-lastFrame)/1000,0,.033);lastFrame=time;try{tick(raw);draw()}catch(err){console.error('一球灭城运行异常',err);toast('运行发生异常：请刷新网页')}requestAnimationFrame(loop)}
+function loop(time){const raw=clamp((time-lastFrame)/1000,0,.033);lastFrame=time;try{tick(raw);draw()}catch(err){console.error('飞车拆城运行异常',err);toast('运行发生异常：请刷新网页')}requestAnimationFrame(loop)}
 function toAim(e){const rect=C.getBoundingClientRect(),x=(e.clientX-rect.left)/rect.width*W,y=(e.clientY-rect.top)/rect.height*H;S.aimX=clamp(x,15,405);S.aimY=clamp(y,90,641)}
 C.addEventListener('pointerdown',e=>{if(S.state!==T.playing&&S.state!==T.demo)return;e.preventDefault();toAim(e);S.drag=true;C.setPointerCapture(e.pointerId)});
 C.addEventListener('pointermove',e=>{if(!S.drag)return;e.preventDefault();toAim(e)});
@@ -160,10 +284,10 @@ el('shootBtn').addEventListener('click',()=>{autoAim();fire()});el('powerBtn').a
 el('demoBtn').addEventListener('click',()=>{loadStage(16,true);S.aimX=210;S.aimY=240;fire();setTimeout(()=>{if(S.demo){S.power=100;windStorm()}},1500)});
 el('fastBtn').addEventListener('click',()=>{S.multiplier=S.multiplier===1?1.7:1;el('fastBtn').textContent=S.multiplier===1?'⏩ 1×速度':'⏩ 1.7×速度';toast('当前速度 '+S.multiplier+'×')});
 el('photoBtn').addEventListener('click',savePoster);el('stageBtn').addEventListener('click',openStages);el('oldBtn').addEventListener('click',()=>{location.href='legacy/index.html'});
-el('helpBtn').addEventListener('click',()=>{showModal(`<div class="big">🐒</div><h2>3 秒上手，越炸越爽！</h2><p style="text-align:left">🎯 <b>拖动瞄准，松开发射</b>；也可以直接按「一键开炮」。<br>🟣 <b>紫色裂变</b> → 一变四，满屏弹雨。<br>🟠 <b>橙色炸弹</b> → 附近建筑连锁引爆。<br>🔵 <b>蓝色激光</b> → 横扫整排目标。<br>⚡ <b>闪电核心</b> → 传导更多建筑。<br>🌟 <b>金色能源</b> → 超大范围爆炸。<br>🔥 <b>越炸越强</b>，下方能量满100%后，点击「毁灭风暴」，主动制造爽点。</p><div class="row"><button class="cta hot" onclick="closeModal()">👌 直接开炸</button><button class="cta dark" onclick="closeModal();el('demoBtn').click()">💣 先看爆爽演示</button></div>`) });
-function openStages(){const tiles=Array.from({length:24},(_,i)=>`<button class="${i+1===S.stage?'sel':i+1<maxUnlocked?'done':''}" onclick="loadStage(${i+1})">${String(i+1).padStart(2,'0')}</button>`).join('');showModal(`<h2>🗺️ 24 场爆爽挑战</h2><p>每6关一种主题。可直接试玩任意关卡，通关后会记录进度。</p><div class="level-grid">${tiles}</div><div class="row"><button class="cta dark" onclick="closeModal()">返回游戏</button><button class="cta hot" onclick="loadStage(${S.stage},true)">🎆 爆爽训练</button></div><p class="tiny">经典90关旧版还保留在主页面「经典90关」中</p>`)}
-function savePoster(){try{const out=document.createElement('canvas');out.width=720;out.height=1280;const c=out.getContext('2d');const grad=c.createLinearGradient(0,0,0,1280);grad.addColorStop(0,'#131944');grad.addColorStop(1,'#070c22');c.fillStyle=grad;c.fillRect(0,0,720,1280);c.fillStyle='#fff';c.textAlign='center';c.font='900 54px system-ui';c.fillText('💥 一球灭城',360,120);c.drawImage(C,38,158,644,1135);c.fillStyle='#070d22dd';c.fillRect(38,1085,644,175);c.fillStyle='#ffdf83';c.font='bold 52px system-ui';c.fillText(`${Math.round(100*S.destroyed/S.total)}% 毁灭 · ${S.best} 连击`,360,1160);c.fillStyle='#c8eaff';c.font='22px system-ui';c.fillText('ProfMonkey  ·  V10 爽感革命',360,1210);
- out.toBlob(blob=>{if(!blob){toast('当前浏览器暂不支持截图');return}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='一球灭城_爆破高光.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast('📸 已生成爆破战绩图片')},'image/png')}catch(e){toast('该浏览器暂不支持截图')}}
+el('helpBtn').addEventListener('click',()=>{showModal(`<div class="big">🚘</div><h2>3 秒上手，赛车撞楼！</h2><p style="text-align:left">🚘 <b>拖动选撞击角度，松手出车</b>；也能直接点「一键出车」。<br>🟠 <b>橙色弱点</b> → 撞断两侧底层，整栋楼层层坍塌。<br>💥 <b>爆破油桶</b> → 周边建筑连锁引爆。<br>⚙️ <b>特殊设施</b> → 裂变赛车、激光扫射。<br>⚡ <b>电力核心</b> → 传导更多建筑。<br>🌟 <b>金色能源</b> → 超大范围建筑爆破。<br>🔥 <b>越撞越强</b>，氮气满100%后，点击「超级冲撞」，主动引爆街区。</p><div class="row"><button class="cta hot" onclick="closeModal()">🚘 直接撞楼</button><button class="cta dark" onclick="closeModal();el('demoBtn').click()">🏁 先看飞车狂飙</button></div>`) });
+function openStages(){const tiles=Array.from({length:24},(_,i)=>`<button class="${i+1===S.stage?'sel':i+1<maxUnlocked?'done':''}" onclick="loadStage(${i+1})">${String(i+1).padStart(2,'0')}</button>`).join('');showModal(`<h2>🗺️ 24 场爆爽挑战</h2><p>每6关一种主题。可直接试玩任意关卡，通关后会记录进度。</p><div class="level-grid">${tiles}</div><div class="row"><button class="cta dark" onclick="closeModal()">返回游戏</button><button class="cta hot" onclick="loadStage(${S.stage},true)">🏁 极速拆城训练</button></div><p class="tiny">经典90关旧版还保留在主页面「经典90关」中</p>`)}
+function savePoster(){try{const out=document.createElement('canvas');out.width=720;out.height=1280;const c=out.getContext('2d');const grad=c.createLinearGradient(0,0,0,1280);grad.addColorStop(0,'#131944');grad.addColorStop(1,'#070c22');c.fillStyle=grad;c.fillRect(0,0,720,1280);c.fillStyle='#fff';c.textAlign='center';c.font='900 54px system-ui';c.fillText('🚘 飞车拆城',360,120);c.drawImage(C,38,158,644,1135);c.fillStyle='#070d22dd';c.fillRect(38,1085,644,175);c.fillStyle='#ffdf83';c.font='bold 52px system-ui';c.fillText(`${Math.round(100*S.destroyed/S.total)}% 毁灭 · ${S.best} 连击`,360,1160);c.fillStyle='#c8eaff';c.font='22px system-ui';c.fillText('ProfMonkey  ·  V11 狂飙崩塌',360,1210);
+ out.toBlob(blob=>{if(!blob){toast('当前浏览器暂不支持截图');return}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='飞车拆城_赛车撞楼高光.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast('📸 已生成爆破战绩图片')},'image/png')}catch(e){toast('该浏览器暂不支持截图')}}
 window.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();if(S.power>=100)windStorm();else fire()}if(e.code==='KeyR')loadStage(S.stage,S.demo)});
 el('soundBtn').textContent=muted?'🔇 静音':'🔊 音效';loadStage(1);requestAnimationFrame(loop);
 </script></body></html>
